@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity_old">
+    <!--always 会一直显示 ifRoom 如果有空间的话才显示  collapseActionView 没有空间的时候折叠显示-->
+    <item
+        android:icon="@drawable/tools"
+        android:title="2"
+        app:showAsAction="always|withText">
+
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/item2_1"
+                    android:icon="@drawable/tools"
+                    android:title="2.1"
+                    app:showAsAction="always|withText" />
+                <item
+                    android:icon="@drawable/tools"
+                    android:title="2.2"
+                    app:showAsAction="always|withText" />
+
+                <!--在显示一个列表菜单的时候，将会根据orderInCategory提供的值从大到小来排序显示-->
+                <item
+                    android:icon="@drawable/tools"
+                    android:orderInCategory="101"
+                    android:title="2.3"
+                    app:showAsAction="always|withText" />
+
+                <!--actionLayout是制定一个layout xml布局文件，actionViewClass是指定一个类。-->
+                <!--这里使用了系统自带的android.widget.SearchView控件，-->
+                <!--app:actionLayout="@layout/menu_item_layout"-->
+                <item
+                    android:actionViewClass="android.widget.SearchView"
+                    android:orderInCategory="100"
+                    android:title="布局item"
+                    app:showAsAction="ifRoom|collapseActionView" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

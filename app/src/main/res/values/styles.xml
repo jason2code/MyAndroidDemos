@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="hotelplus_contacts_push_bottom">
+        <item name="android:windowEnterAnimation">@anim/mydemo_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/mydemo_push_bottom_out</item>
+    </style>
+
+    <style name="hotelplus_contacts_push_top">
+        <item name="android:windowEnterAnimation">@anim/mydemo_push_top_in</item>
+        <item name="android:windowExitAnimation">@anim/mydemo_push_top_out</item>
+    </style>
+
+</resources>

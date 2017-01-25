@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.demos.jason.myandroiddemos.intent.IntentActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openWebsite"
+        android:text="打开网页" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dialNumber"
+        android:text="拨号" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewFirstContact"
+        android:text="展示电话本中标识为1的联系人" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="editFirstContact"
+        android:text="编辑电话本中标识为1的联系人" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="askForSinger"
+        android:text="自定义action:请求王二唱歌" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="askForSinger2"
+        android:text="借助data Uri:请求王二唱歌" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="askForSingerWithMimeType"
+        android:text="借助data 和 mimetype Uri:请求王二唱民歌" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="askForSingerWithMimeTypeForRockSong"
+        android:text="借助data 和 mimetype Uri:请求王二唱摇滚" />
+
+</LinearLayout>

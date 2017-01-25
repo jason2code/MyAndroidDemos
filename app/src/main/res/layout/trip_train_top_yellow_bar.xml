@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <!--进度条模式-->
+    <FrameLayout
+        android:id="@+id/top_bar_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <!--进度条-->
+        <ProgressBar
+            android:id="@+id/top_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/trip_train_progress_bar_drawable"/>
+
+        <!--请稍后提示信息-->
+        <TextView
+            android:id="@+id/progress_hint_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            tools:text="正在努力为您占座，成功后可支付，请稍候…"/>
+
+        <!--进度数字信息-->
+        <TextView
+            android:id="@+id/progress_percent_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:paddingRight="12dp"
+            tools:text="89%"/>
+    </FrameLayout>
+
+    <!--信息展示模式-->
+    <LinearLayout
+        android:id="@+id/top_bar_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="21dp"
+        android:paddingTop="8dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingRight="3dp"
+            android:src="@drawable/trip_train_vector_drawable_exclamatory_icon_selector"/>
+
+        <TextView
+            android:id="@+id/top_bar_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+</merge>

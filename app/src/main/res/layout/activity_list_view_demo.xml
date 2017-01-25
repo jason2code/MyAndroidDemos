@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.viktor.androidstudydemo.uiComponent.listView.ListViewDemoActivity">
+
+    <Button
+        android:text="获取单选所选择的位置"
+        android:id="@+id/btn_get_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            tools:listheader="@layout/header_view"
+            tools:listitem="@layout/listview_item"
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+        <TextView
+            android:id="@+id/top_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/aquamarine"
+            android:textSize="30sp" />
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+

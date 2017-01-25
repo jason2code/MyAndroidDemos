@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiComponent.customView.CustomViewActivity">
+    <!--具体属性定义看看 values/attrs-->
+    <!--xmlns 的意思就是 xml namespace ,其意义等同于java的import-->
+    <!--下面前面用custom:就是因为定义了一个xmlns名为custom的命名空间-->
+    <com.viktor.androidstudydemo.uiComponent.customView.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        custom:leftBackgroud="@color/red"
+        custom:leftText="返回"
+        custom:leftTextSize="10sp"
+        custom:titleColor="@color/white"
+        custom:titleText="TopBar"
+        custom:titleTextSize="15sp"></com.viktor.androidstudydemo.uiComponent.customView.TopBar>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_progress_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.demos.jason.myandroiddemos.uiProgressbar.ProgressBarActivity">
+
+    <include layout="@layout/trip_train_top_yellow_bar"></include>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showProgressMode"
+        android:text="启动动画"/>
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTopBarInfoMode"
+        android:text="启动内容展示"/>
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/trip_train_left_semi_circle"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trip_train_left_semi_circle"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:layerType="software"
+            android:src="@drawable/trip_train_hold_seat_dashed_line"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trip_train_right_semi_circle"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:text="YY ⇀ XX"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
