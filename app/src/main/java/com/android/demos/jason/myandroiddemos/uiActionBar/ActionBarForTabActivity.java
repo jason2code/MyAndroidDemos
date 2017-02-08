@@ -1,12 +1,12 @@
 package com.android.demos.jason.myandroiddemos.uiActionBar;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.android.demos.jason.myandroiddemos.R;
 import com.android.demos.jason.myandroiddemos.utils.UiUtils;
@@ -22,10 +22,34 @@ public class ActionBarForTabActivity extends AppCompatActivity implements Action
 //    int displayType = CUSTOM;
 //    int displayType = LIST_TYPE;
 
+    TextView textView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_bar_for_tab);
+
+
+        /**
+         * 测量状态 验证，和actionbar无关
+         */
+        textView = (TextView) findViewById(R.id.righttext);
+        final TextView tv = (TextView) findViewById(R.id.righttext);
+        final LinearLayout ll_root = (LinearLayout) findViewById(R.id.ll_root);
+        tv.post(new Runnable() {
+            @Override
+            public void run() {
+                int state = ll_root.getMeasuredState();
+                UiUtils.showToast(ll_root.getContext(), "高度:" + ll_root.getMeasuredHeight() + " 宽度" + ll_root.getMeasuredWidth());
+                if ((state & View.MEASURED_STATE_MASK) == View.MEASURED_STATE_TOO_SMALL) {
+                    UiUtils.showToast(tv.getContext(), "挤不下了");
+                }
+            }
+        });
+        /*********************/
+
+
         actionBar = getSupportActionBar();
 
         switch (displayType) {
@@ -37,6 +61,27 @@ public class ActionBarForTabActivity extends AppCompatActivity implements Action
                 break;
             case LIST_TYPE:
                 break;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        textView.post(new Runnable() {
+            @Override
+            public void run() {
+                int width = textView.getMeasuredWidth();
+                int height = textView.getMeasuredHeight();
+            }
+        });
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if(hasFocus) {
+            int width = textView.getMeasuredWidth();
+            int height = textView.getMeasuredHeight();
         }
     }
 

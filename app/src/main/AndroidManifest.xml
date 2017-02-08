@@ -209,14 +209,24 @@
         <activity
             android:name=".uiRecyclerView.RecyclerViewActivity"
             android:label="RecyclerView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.android.demos.jason.myandroiddemos"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".clip.ClipActivity"
+            android:label="Clip"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="com.android.demos.jason.myandroiddemos"/>
             </intent-filter>
-
         </activity>
+
+
     </application>
 
 </manifest>
