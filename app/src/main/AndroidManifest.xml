@@ -169,15 +169,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".uiAnimator.AnimatorActivity"
-            android:label="动画">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="com.android.demos.jason.myandroiddemos"/>
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".switches.SwitchesActivity"
             android:label="各种开关">
             <intent-filter>
@@ -217,16 +208,32 @@
         </activity>
         <activity
             android:name=".clip.ClipActivity"
-            android:label="Clip"
-            >
+            android:label="Clip">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="com.android.demos.jason.myandroiddemos"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".uiAnimator.AnimMainActivity"
+            android:label="动画">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-
+                <category android:name="com.android.demos.jason.myandroiddemos"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".uiAnimator.FrameAnimActivity">
+        </activity>
+        <activity android:name=".uiAnimator.AnimatorActivity">
+        </activity>
+        <activity android:name=".uiAnimator.TweenedActivity">
+        </activity>
+        <activity android:name=".uiAnimator.PropertyActivity">
+        </activity>
+        <activity android:name=".uiAnimator.animBall.ComplexPropertyAnimActivity">
+        </activity>
     </application>
 
 </manifest>

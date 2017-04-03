@@ -3,6 +3,7 @@ package com.android.demos.jason.myandroiddemos.uiRecyclerView;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
@@ -44,7 +45,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         staggeredViewAdapter = new MyRecyclerStaggeredViewAdapter(this, mDatas);
         staggeredViewAdapter.setListener(itemClickListener);
         recyclerView.setAdapter(staggeredViewAdapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        recyclerView.setLayoutManager(new GridLayoutManager(this, 4));
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
 //        recyclerView.addItemDecoration(new MyRecyclerListItemDecoration(this, MyRecyclerListItemDecoration.VERTICAL_LIST));
